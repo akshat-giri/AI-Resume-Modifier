@@ -155,28 +155,9 @@ def get_ats_score(input,job_desc,prompt):
     # print(response.text.split('```'))
     return response.text
 
-# # Function to extract text from the uploaded PDF resume
-# def extract_text_from_pdf(pdf_file):
-#     with pdfplumber.open(pdf_file) as pdf:
-#         text = ''
-#         for page in pdf.pages:
-#             text += page.extract_text()
-#     return text
-
-# # Function to extract text from the uploaded PDF resume
-# def extract_text_from_tex(latex_file):
-#     with open(latex_file, 'r') as file:
-#         latex_content = file.read()
-#     return latex_content
-
-
-
 # Streamlit Interface
 def main():
     st.title("AI Resume Modifier")
-
-    # # Step 1: Upload resume
-    # resume_file = st.file_uploader("Upload Resume PDF", type="pdf")
 
     # Step 1: Upload LaTeX Resume
     latex_file = st.file_uploader("Upload LaTeX Resume (.tex)", type="tex")
@@ -190,13 +171,9 @@ def main():
             # latex_text = extract_text_from_tex(latex_file)
             latex_text = latex_file.getvalue().decode("utf-8")
 
-            # if st.button('Run'):
             # Modify the resume using Google Gemini
             (modified_resume, changes) = get_gemini_response(latex_text, job_description, prompt)
-            # Display the ATS score for resume
-            # st.subheader("ATS SCORE")
-            # st.text(score)
-
+            
             ats_score = get_ats_score(modified_resume, job_description, ATS_prompt)
             st.subheader("ATS SCORE")
             st.text(ats_score.replace('*', ''))
