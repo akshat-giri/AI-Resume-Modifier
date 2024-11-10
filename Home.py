@@ -66,13 +66,6 @@ elif page == "Results":
     These results indicate that the AI Resume Modifier is effective in helping job seekers improve there resume.
 """)
 
-elif page == "Prerequisite":
-    st.header("Prerequisite")
-    st.markdown("""
-    - **Input File Format**: File is required to be in .tex (LaTex) format.
-    - **Recommendation**: Use Overleaf platform to create resume in LaTex format
-    
-""")
 
 
 # Define the custom footer HTML with a dark black background and white text
