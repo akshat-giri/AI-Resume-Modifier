@@ -24,7 +24,7 @@ In this project, we aim to solve that problem by using AI to analyze, modify, an
 
 # Sidebar for Navigation
 st.sidebar.title("About Project")
-page = st.sidebar.radio("", ("Overview", "Goals", "Results", "Conclusion"))
+page = st.sidebar.radio("", ("Overview", "Goals", "Results", "Prerequisite"))
 
 # Display content based on sidebar selection
 if page == "Overview":
@@ -64,6 +64,14 @@ elif page == "Results":
     - **User Satisfaction**: Initial user feedback indicates that job seekers appreciate the tool's ability to preserve the original resume's content while making it more ATS-friendly.
 
     These results indicate that the AI Resume Modifier is effective in helping job seekers improve there resume.
+""")
+
+elif page == "Prerequisite":
+    st.header("Prerequisite")
+    st.markdown("""
+    - **Input File Format**: File is required to be in .tex (LaTex) format.
+    - **Recommendation**: Use Overleaf platform to create resume in LaTex format
+    
 """)
 
 
