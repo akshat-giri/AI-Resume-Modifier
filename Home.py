@@ -1,4 +1,4 @@
-import streamlit as st
+ import streamlit as st
 
 # Set page title and favicon
 st.set_page_config(
@@ -63,7 +63,7 @@ elif page == "Results":
     - **ATS Pass Rate**: After modification, resumes showed a significant increase in pass rates through common ATS systems, with an average pass rate improvement of 40%.
     - **User Satisfaction**: Initial user feedback indicates that job seekers appreciate the tool's ability to preserve the original resume's content while making it more ATS-friendly.
 
-    These results indicate that the AI Resume Modifier is effective in helping job seekers improve th
+    These results indicate that the AI Resume Modifier is effective in helping job seekers improve there resume.
 """)
 
 
